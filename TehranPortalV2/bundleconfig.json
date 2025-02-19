@@ -1,0 +1,32 @@
+[
+  {
+    "inputFiles": [
+      "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "wwwroot/assets/fonts/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css",
+      "wwwroot/assets/fonts/vazir/Font-Vazir.css",
+      "wwwroot/assets/css/TehranIt.css"
+    ],
+    "outputFileName": "wwwroot/Bundel/site.min.css",
+    "minify": {
+      "enabled": true,
+      "adjustRelativePaths": true,
+      "commentMode": "none",
+      "gzip": true
+    }
+  },
+  {
+    "inputFiles": [
+      "wwwroot/lib/jquery/dist/jquery.min.js",
+      "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "wwwroot/assets/lib/Loader-Preloader-Plugin-jQuery-Preloadinator/dist/js/jquery.preloadinator.min.js",
+      "wwwroot/assets/js/TehranIT.js"
+    ],
+    "outputFileName": "wwwroot/Bundel/site.min.js",
+    "minify": {
+      "enabled": true,
+      "adjustRelativePaths": true,
+      "commentMode": "none",
+      "gzip": true
+    }
+  }
+]

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body class="light blue">
+    <div class="wrapper tehranit-wrapper">
+       
+        <!--main-->
+        <div id="main" class="main">
+           
+
+            <!--main content-->
+            <div class="container-fluid pt-2 pb-2">
+                <!--start RenderBody-->
+                @RenderBody()
+                <!--end RenderBody-->
+            </div>
+         
+        </div>
+    </div>
+    <!--loader-->
+    <partial name="Partials/_LoaderPartialView" />
+    <partial name="Partials/_ScriptsPartialView" />
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

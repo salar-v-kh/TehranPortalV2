@@ -1,0 +1,217 @@
+﻿<div id="sidebar" class="sidebar">
+    <!--logo-->
+    <div class="sidebar-logo">
+        <a title="TehranIT.NET" asp-controller="Home" asp-action="Index">
+            <img src="~/assets/Image/Logo/maskan-logo.png" class="logo1" />
+            <img src="~/assets/Image/Logo/bankmaskanfa.png" class="logo2" />
+        </a>
+        <i class="bi bi-x-lg navbar-btn-close"></i>
+    </div>
+    <div class="sidebar-Menu sticky-top">
+        <!--menu-->
+        <ul>
+                <!--item-->
+                <li>
+                    <a href="index.html">
+                        <i class="bi bi-speedometer"></i>
+                        <span>داشبورد مدیریتی</span>
+                    </a>
+                </li>
+                <!--item subMenu-->
+                <li class="sub-menu">
+                    <a href="javascript:void(0);">
+                        <i class="bi bi-columns"></i>
+                        <span>گروه پایه</span>
+                        <i class="bi bi-chevron-down sub-menu-icon"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a asp-controller="UserPersonal" asp-action="Index">
+                            <span>کاربران</span>
+                            </a>
+
+                        </li>
+                        <li>
+                             <a asp-controller="UserPersonal" asp-action="Index">
+                                <span>تجهیزات</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-controller="Branches" asp-action="Index">
+                                <span>شعب</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <span>انبار</span>
+                            </a>
+                        </li>
+                        <li>
+                        <a asp-controller="YLables" asp-action="Index">
+                                <span>برچسب </span>
+                            </a>
+                        </li>
+                       
+                    </ul>
+                </li>
+            </>
+                <!--item subMenu-->
+                <li class="sub-menu">
+                    <a href="javascript:void(0);">
+                        <i class="bi bi-columns-gap"></i>
+                        <span>گزارش ها</span>
+                        <i class="bi bi-chevron-down sub-menu-icon"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="empty-index.html" target="_blank">
+                                <span>گزارش تجهیزات</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="empty-form.html" target="_blank">
+                                <span>گزارش کاربران</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="empty.html" target="_blank">
+                                <span>گزارش انبار ها</span>
+                            </a>
+                        </li>
+                        <!-- <li>
+                             <a href="empty-box.html" target="_blank">
+                                 <span>صفـــحه خام محتوا + چیدمان</span>
+                             </a>
+                         </li>-->
+                    </ul>
+                </li>
+                <!--item subMenu-->
+                <!--
+                <li class="sub-menu">
+                    <a href="javascript:void(0);">
+                        <i class="bi bi-layout-wtf"></i>
+                        <span>چیدمان صفـــحات</span>
+                        <i class="bi bi-chevron-down sub-menu-icon"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="layout-content.html">
+                                <span>صفـــحه محتوا</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="layout-form.html">
+                                <span>صفـــحه فرم</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>-->
+                <!--item subMenu-->
+                <!-- <li class="sub-menu">
+                     <a href="javascript:void(0);">
+                         <i class="bi bi-ui-checks"></i>
+                         <span>فــــــرم هــا</span>
+                         <i class="bi bi-chevron-down sub-menu-icon"></i>
+                     </a>
+                     <ul>
+                         <li>
+                             <a href="form.html">
+                                 <span>الـــــمان های فــرم</span>
+                             </a>
+                         </li>
+                         <li>
+                             <a href="form-tiny.html">
+                                 <span>ویـــرایشگر تایــــنی فــرم</span>
+                             </a>
+                         </li>
+                         <li>
+                             <a href="form-check.html">
+                                 <span>کتـــگوری فــرم</span>
+                             </a>
+                         </li>
+                         <li>
+                             <a href="form-JalaliDatePicker.html">
+                                 <span>دیـــت پیکر فــرم</span>
+                             </a>
+                         </li>
+                         <li>
+                             <a href="form-tags-input.html">
+                                 <span>برچسب فــرم</span>
+                             </a>
+                         </li>
+                         <li>
+                             <a href="form-post.html">
+                                 <span>فــرم ارسال محتوا</span>
+                             </a>
+                         </li>
+                     </ul>
+                 </li>-->
+                <!--item subMenu-->
+                <li class="sub-menu">
+                    <a href="javascript:void(0);">
+                        <i class="bi bi-toggles2"></i>
+                        <span>ویجـــت ها</span>
+                        <i class="bi bi-chevron-down sub-menu-icon"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="form-tiny.html">
+                                <span>تایــــنی</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="form-check.html">
+                                <span>کتـــگوری</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="form-JalaliDatePicker.html">
+                                <span>دیـــت پیکر</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="form-tags-input.html">
+                                <span>برچسب</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="table.html">
+                                <span>جدول</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!--item -->
+                <li>
+                    <a href="table.html">
+                        <i class="bi bi-table"></i>
+                        <span>جــــــدول</span>
+                    </a>
+                </li>
+                <!--item-->
+                <li>
+                    <a href="sidebar.html">
+                        <i class="bi bi-layout-sidebar-inset-reverse"></i>
+                        <span>سایـــدبار</span>
+                    </a>
+                </li>
+                <!--item-->
+                <li>
+                    <a href="typography.html">
+                        <i class="bi bi-blockquote-right"></i>
+                        <span>تایـــپوگرافــی</span>
+                    </a>
+                </li>
+                <!--item-->
+                <li>
+                    <a href="login.html">
+                        <i class="bi bi-box-arrow-in-left"></i>
+                        <span>ورود به سایت</span>
+                    </a>
+                </li>
+            </ul>
+        </ul>
+        
+
+    </div>
+</div>

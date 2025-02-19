@@ -1,0 +1,90 @@
+﻿@model PortalWebMVC.Models.Entities.Base_info.UserPersonal
+
+@{
+    ViewBag.Title = "ایجاد فیلد جدید";
+    ViewBag.TitlePage = "ایجاد فیلد جدید";
+}
+
+<form asp-action="Create" class="row tehranit-box">
+    <!--right post-->
+    <div class="col-12 col-xl-9">
+        <!--itemBox-->
+        <div class="content-box">
+            <div class="title-box mb-3">
+                <span>ایجاد فیلد جدید</span>
+                <i class="bi bi-pencil-fill"></i>
+            </div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-12 mb-3">
+                <label asp-for="Id_Personal" class="control-label"></label>
+                <input asp-for="Id_Personal" class="form-control" />
+                <span asp-validation-for="Id_Personal" class="text-danger"></span>
+            </div>
+            <div class="col-12 mb-3">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="col-12 mb-3">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="col-12 mb-3">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+                <label class="form-check-label">@Html.DisplayNameFor(model => model.Gender)</label>
+                <div class="form-check">
+                    <div>
+                      <input class="form-check-input" asp-for="Gender" />
+                      <label class="form-check-label"> عنوان را وارد کنید</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-3">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+           </div>
+       </div>
+    <!--left post-->
+    <div class="col-12 col-xl-3">
+        <div class="row">
+            <!--itemBox-->
+            <div class="col-xl-12 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="content-box">
+                    <div class="title-box">
+                        <span>اقـــدامات</span>
+                        <i class="bi bi-gear-fill"></i>
+                    </div>
+                    <div class="publishBtn-box">
+                      <div>
+                        <input type="submit" value="انتشار" class="bt btn-publish" />
+                        <a asp-action="Index" class="bt btn-update">بازگشت به لیست</a>
+                       </div>
+                      </div>
+                </div>
+            </div>
+            <!--itemBox-->
+            <div class="col-xl-12 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="content-box">
+                    <div class="title-box">
+                        <span>عنوان تایتل</span>
+                        <i class="bi bi-bullseye"></i>
+                    </div>
+                    <p>باکس 4</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+        
+@section Styles{}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

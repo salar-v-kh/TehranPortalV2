@@ -1,0 +1,292 @@
+﻿@* @model IEnumerable<PortalWebMVC.Models.Entities.Base_info.ITLabele>
+
+<div class="row tehranit-box">
+  <!--item-->
+  <div class="col-12">
+      <div class="content-box">
+        <div class="title-box">
+            <span>لیــــست نام</span>
+            <i class="bi bi-list-task"></i>
+        </div>
+        <a class="MyBtn-icon MyBtn-base mb-2" asp-action="Create"><span>افزودن فیلد جدید</span><i class="bi bi-plus-lg"></i></a>
+        <div class="table-responsive tehranit-table">
+            <table class="table align-middle table-bordered table-hover">
+                 <thead>
+                      <tr>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.Id)
+                                </th>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.ITLableStatus)
+                                </th>
+                          <th></th>
+                      </tr>
+                 </thead>
+                 <tbody>
+                      @foreach (var item in Model) {
+                          <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ITLableStatus)
+            </td>
+                              <td>
+                                  <a class="ati ati-edit" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-fill"></i></a>
+                                  <a class="ati ati-view" asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-eye-fill"></i></a>
+                                  <a class="ati ati-remove" asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash3-fill"></i></a>
+                              </td>
+                          </tr>
+                        }
+                 </tbody>
+              </table>
+        </div>
+      </div>
+  </div>
+</div>
+
+@section Styles{}
+@section Scripts{}
+
+@*  
+ @model IEnumerable<PortalWebMVC.Models.Entities.Base_info.ITLabele>
+
+<div class="row tehranit-box">
+    <!-- item -->
+    <div class="col-12">
+        <div class="content-box">
+            <div class="title-box">
+                <span>لیــــست نام</span>
+                <i class="bi bi-list-task"></i>
+            </div>
+            <a class="MyBtn-icon MyBtn-base mb-2" asp-action="Create">
+                <span>افزودن فیلد جدید</span>
+                <i class="bi bi-plus-lg"></i>
+            </a>
+            <div class="table-responsive tehranit-table">
+                <table id="itLableTable" class="table align-middle table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Id)</th>
+                            <th>@Html.DisplayNameFor(model => model.IT_CodeLable)</th>
+                            <th>@Html.DisplayNameFor(model => model.ITLableStatus)</th>
+                            <th>عملیات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                                <td>@Html.DisplayFor(modelItem => item.IT_CodeLable)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ITLableStatus)</td>
+                                <td>
+                                    <a class="ati ati-edit" asp-action="Edit" asp-route-id="@item.Id">
+                                        <i class="bi bi-pencil-fill"></i>
+                                    </a>
+                                    <a class="ati ati-view" asp-action="Details" asp-route-id="@item.Id">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </a>
+                                    <a class="ati ati-remove" asp-action="Delete" asp-route-id="@item.Id">
+                                        <i class="bi bi-trash3-fill"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
+}
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new DataTable("#itLableTable", {
+                language: {
+                    search: "جستجو:",
+                    lengthMenu: "نمایش _MENU_ رکورد در صفحه",
+                    info: "نمایش _START_ تا _END_ از _TOTAL_ رکورد",
+                    paginate: {
+                        first: "اول",
+                        last: "آخر",
+                        next: "بعدی",
+                        previous: "قبلی"
+                    }
+                },
+                paging: true, // صفحه‌بندی فعال
+                searching: true, // جستجو فعال
+                ordering: true // مرتب‌سازی فعال
+            });
+        });
+    </script>
+}
+ 
+
+
+@model IEnumerable<PortalWebMVC.Models.Entities.Base_info.ITLabele>
+
+<div class="row tehranit-box">
+    <!-- item -->
+    <div class="col-12">
+        <div class="content-box">
+            <div class="title-box">
+                <span>لیــــست نام</span>
+                <i class="bi bi-list-task"></i>
+            </div>
+            <a class="MyBtn-icon MyBtn-base mb-2" asp-action="Create">
+                <span>افزودن فیلد جدید</span>
+                <i class="bi bi-plus-lg"></i>
+            </a>
+            <div class="table-responsive tehranit-table">
+                <table id="itLableTable" class="table align-middle table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Id)</th>
+                            <th>@Html.DisplayNameFor(model => model.IT_CodeLable)</th>
+                            <th>@Html.DisplayNameFor(model => model.ITLableStatus)</th>
+                            <th>عملیات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                                <td>@Html.DisplayFor(modelItem => item.IT_CodeLable)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ITLableStatus)</td>
+                                <td>
+                                    <a class="ati ati-edit" asp-action="Edit" asp-route-id="@item.Id">
+                                        <i class="bi bi-pencil-fill"></i>
+                                    </a>
+                                    <a class="ati ati-view" asp-action="Details" asp-route-id="@item.Id">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </a>
+                                    <a class="ati ati-remove" asp-action="Delete" asp-route-id="@item.Id">
+                                        <i class="bi bi-trash3-fill"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
+}
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new DataTable("#itLableTable", {
+                language: {
+                    search: "جستجو:",
+                    lengthMenu: "نمایش _MENU_ رکورد در صفحه",
+                    info: "نمایش _START_ تا _END_ از _TOTAL_ رکورد",
+                    paginate: {
+                        first: "اول",
+                        last: "آخر",
+                        next: "بعدی",
+                        previous: "قبلی"
+                    }
+                },
+                paging: true, // صفحه‌بندی فعال
+                searching: true, // جستجو فعال
+                ordering: true, // مرتب‌سازی فعال
+                pageLength: 10  // تعداد رکوردها در هر صفحه
+            });
+        });
+    </script>
+}
+*@
+
+                    @model IEnumerable<PortalWebMVC.Models.Entities.Base_info.ITLabele>
+
+<div class="row tehranit-box">
+    <!-- item -->
+    <div class="col-12">
+        <div class="content-box">
+            <div class="title-box">
+                <span>لیــــست نام</span>
+                <i class="bi bi-list-task"></i>
+            </div>
+            <a class="MyBtn-icon MyBtn-base mb-2" asp-action="Create">
+                <span>افزودن فیلد جدید</span>
+                <i class="bi bi-plus-lg"></i>
+            </a>
+            <div class="table-responsive tehranit-table">
+                <table id="itLableTable" class="table align-middle table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Id)</th>
+                            <th>@Html.DisplayNameFor(model => model.IT_CodeLable)</th>
+                            <th>@Html.DisplayNameFor(model => model.ITLableStatus)</th>
+                            <th>عملیات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                                <td>@Html.DisplayFor(modelItem => item.IT_CodeLable)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ITLableStatus)</td>
+                                <td>
+                                    <a class="ati ati-edit" asp-action="Edit" asp-route-id="@item.IT_CodeLable">
+                                        <i class="bi bi-pencil-fill"></i>
+                                    </a>
+                                    <a class="ati ati-view" asp-action="Details" asp-route-id="@item.IT_CodeLable">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </a>
+                                    <a class="ati ati-remove" asp-action="Delete" asp-route-id="@item.IT_CodeLable">
+                                        <i class="bi bi-trash3-fill"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
+}
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new DataTable("#itLableTable", {
+                language: {
+                    search: "جستجو:",
+                    lengthMenu: "نمایش _MENU_ رکورد در صفحه",
+                    info: "نمایش _START_ تا _END_ از _TOTAL_ رکورد",
+                    paginate: {
+                        first: "اول",
+                        last: "آخر",
+                        next: "بعدی",
+                        previous: "قبلی"
+                    }
+                },
+                paging: true, // صفحه‌بندی فعال
+                searching: true, // جستجو فعال
+                ordering: true, // مرتب‌سازی فعال
+                pageLength: 10  // تعداد رکوردها در هر صفحه
+            });
+        });
+    </script>
+}

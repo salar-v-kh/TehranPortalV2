@@ -1,0 +1,36 @@
+﻿
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <partial name="Partials/_HeaderPartialView" />
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body class="light blue">
+    <div class="wrapper tehranit-wrapper">
+        <!--sidebar-->
+        <partial name="Partials/_SidebarPartialView" />
+        <!--main-->
+        <div id="main" class="main">
+            <!--navbar-top-->
+            <partial name="Partials/_NavbarPartialView" />
+            <!--title-->
+            <partial name="Partials/_TitlePartialView" />
+            <!-- end title-->
+            <!--main content-->
+            <div class="container-fluid pt-2 pb-2">
+                <!--start RenderBody-->
+                @RenderBody()
+                <!--end RenderBody-->
+            </div>
+            <!--end main content-->
+            <!--footer-->
+            <partial name="Partials/_FooterPartialView" />
+        </div>
+    </div>
+    <!--loader-->
+    <partial name="Partials/_LoaderPartialView" />
+    <partial name="Partials/_ScriptsPartialView" />
+
+    @await RenderSectionAsync("Scripts",required:false)
+</body>
+</html>

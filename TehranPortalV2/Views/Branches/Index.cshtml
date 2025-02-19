@@ -1,0 +1,168 @@
+﻿@* @model IEnumerable<PortalWebMVC.Models.Entities.Base_info.Branch>
+
+@{
+    ViewBag.Title = "لیــــست نام";
+    ViewBag.TitlePage = "لیــــست نام";
+}
+<div class="row tehranit-box">
+  <!--item-->
+  <div class="col-12">
+      <div class="content-box">
+        <div class="title-box">
+            <span>لیــــست نام</span>
+            <i class="bi bi-list-task"></i>
+        </div>
+        <a class="MyBtn-icon MyBtn-base mb-2" asp-action="Create"><span>افزودن فیلد جدید</span><i class="bi bi-plus-lg"></i></a>
+        <div class="table-responsive tehranit-table">
+            <table class="table align-middle table-bordered table-hover">
+                 <thead>
+                      <tr>
+                            <th scope="col">
+                                @Html.DisplayNameFor(model => model.BRCode)
+                            </th>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.BRName)
+                                </th>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.BRPhone1)
+                                </th>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.BRPhone2)
+                                </th>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.BRPhone3)
+                                </th>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.IPAddress)
+                                </th>
+                          <th></th>
+                      </tr>
+                 </thead>
+                 <tbody>
+                      @foreach (var item in Model) {
+                          <tr>
+            <td>
+                 @Html.DisplayFor(modelItem => item.BRCode)
+             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BRName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BRPhone1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BRPhone2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BRPhone3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IPAddress)
+            </td>
+                              <td>
+                                    <a class="ati ati-edit" asp-action="Edit" asp-route-id="@item.BRCode"><i class="bi bi-pencil-fill"></i></a>
+                                    <a class="ati ati-view" asp-action="Details" asp-route-id="@item.BRCode"><i class="bi bi-eye-fill"></i></a>
+                                    <a class="ati ati-remove" asp-action="Delete" asp-route-id="@item.BRCode"><i class="bi bi-trash3-fill"></i></a>
+                              </td>
+                          </tr>
+                        }
+                 </tbody>
+              </table>
+        </div>
+      </div>
+  </div>
+</div>
+
+@section Styles{}
+@section Scripts{}
+
+ *@
+ @model IEnumerable<PortalWebMVC.Models.Entities.Base_info.Branch>
+
+@{
+    ViewBag.Title = "لیــــست نام";
+    ViewBag.TitlePage = "لیــــست نام";
+}
+
+<div class="row tehranit-box">
+    <!-- item -->
+    <div class="col-12">
+        <div class="content-box">
+            <div class="title-box">
+                <span>لیــــست نام</span>
+                <i class="bi bi-list-task"></i>
+            </div>
+            <a class="MyBtn-icon MyBtn-base mb-2" asp-action="Create">
+                <span>افزودن فیلد جدید</span>
+                <i class="bi bi-plus-lg"></i>
+            </a>
+            <div class="table-responsive tehranit-table">
+                <table id="branchTable" class="table align-middle table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.BRCode)</th>
+                            <th>@Html.DisplayNameFor(model => model.BRName)</th>
+                            <th>@Html.DisplayNameFor(model => model.BRPhone1)</th>
+                            <th>@Html.DisplayNameFor(model => model.BRPhone2)</th>
+                            <th>@Html.DisplayNameFor(model => model.BRPhone3)</th>
+                            <th>@Html.DisplayNameFor(model => model.IPAddress)</th>
+                            <th>عملیات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.BRCode)</td>
+                                <td>@Html.DisplayFor(modelItem => item.BRName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.BRPhone1)</td>
+                                <td>@Html.DisplayFor(modelItem => item.BRPhone2)</td>
+                                <td>@Html.DisplayFor(modelItem => item.BRPhone3)</td>
+                                <td>@Html.DisplayFor(modelItem => item.IPAddress)</td>
+                                <td>
+                                    <a class="ati ati-edit" asp-action="Edit" asp-route-id="@item.BRCode">
+                                        <i class="bi bi-pencil-fill"></i>
+                                    </a>
+                                    <a class="ati ati-view" asp-action="Details" asp-route-id="@item.BRCode">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </a>
+                                    <a class="ati ati-remove" asp-action="Delete" asp-route-id="@item.BRCode">
+                                        <i class="bi bi-trash3-fill"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
+}
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new DataTable("#branchTable", {
+                language: {
+                    search: "جستجو:",
+                    lengthMenu: "نمایش _MENU_ رکورد در صفحه",
+                    info: "نمایش _START_ تا _END_ از _TOTAL_ رکورد",
+                    paginate: {
+                        first: "اول",
+                        last: "آخر",
+                        next: "بعدی",
+                        previous: "قبلی"
+                    }
+                },
+                paging: true, // فعال‌سازی صفحه‌بندی
+                searching: true, // فعال‌سازی جستجو
+                ordering: true // فعال‌سازی مرتب‌سازی
+            });
+        });
+    </script>
+}

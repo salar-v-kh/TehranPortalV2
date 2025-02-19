@@ -1,0 +1,273 @@
+﻿@* @model IEnumerable<PortalWebMVC.Models.Entities.Base_info.YLable>
+
+<div class="row tehranit-box">
+  <!--item-->
+  <div class="col-12">
+      <div class="content-box">
+        <div class="title-box">
+            <span>لیــــست نام</span>
+            <i class="bi bi-list-task"></i>
+        </div>
+        <a class="MyBtn-icon MyBtn-base mb-2" asp-action="Create"><span>افزودن فیلد جدید</span><i class="bi bi-plus-lg"></i></a>
+        <div class="table-responsive tehranit-table">
+            <table class="table align-middle table-bordered table-hover">
+                 <thead>
+                      <tr>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.Id)
+                                </th>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.YLableStatus)
+                                </th>
+                          <th></th>
+                      </tr>
+                 </thead>
+                 <tbody>
+                      @foreach (var item in Model) {
+                          <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YLableStatus)
+            </td>
+                              <td>
+                                  <a class="ati ati-edit" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-fill"></i></a>
+                                  <a class="ati ati-view" asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-eye-fill"></i></a>
+                                  <a class="ati ati-remove" asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash3-fill"></i></a>
+                              </td>
+                          </tr>
+                        }
+                 </tbody>
+              </table>
+        </div>
+      </div>
+  </div>
+</div>
+
+@section Styles{}
+@section Scripts{} *@
+
+
+
+
+@* @model IEnumerable<PortalWebMVC.Models.Entities.Base_info.YLable>
+
+<div class="row tehranit-box">
+    <!--item-->
+    <div class="col-12">
+        <div class="content-box">
+            <div class="title-box">
+                <span>لیــــست نام</span>
+                <i class="bi bi-list-task"></i>
+            </div>
+            <a class="MyBtn-icon MyBtn-base mb-2" asp-action="Create"><span>افزودن فیلد جدید</span><i class="bi bi-plus-lg"></i></a>
+            <div class="table-responsive tehranit-table">
+                <table class="table align-middle table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                @Html.DisplayNameFor(model => model.Id)
+                            </th>
+                            <th scope="col">
+                                @Html.DisplayNameFor(model => model.Y_LableCode)
+                            </th>
+                            <th scope="col">
+                                @Html.DisplayNameFor(model => model.YLableStatus)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Id)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Y_LableCode)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.YLableStatus)
+                                </td>
+                                <td>
+                                    <a class="ati ati-edit" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-fill"></i></a>
+                                    <a class="ati ati-view" asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-eye-fill"></i></a>
+                                    <a class="ati ati-remove" asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash3-fill"></i></a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Initialize DataTables
+            $('.table').DataTable();
+        });
+    </script>
+}
+ *@
+
+@* 
+
+<head>
+    <!-- اضافه کردن CSS DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
+</head>
+
+<body>
+    <div class="row tehranit-box">
+        <div class="col-12">
+            <div class="content-box">
+                <div class="title-box">
+                    <span>لیــــست نام</span>
+                    <i class="bi bi-list-task"></i>
+                </div>
+                <a class="btn-icon btn-base mb-2" asp-action="Create">
+                    <span>افزودن فیلد جدید</span><i class="bi bi-plus-lg"></i>
+                </a>
+                <div class="table-responsive tehranit-table">
+                    <table class="table table-striped table-sm table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.Id)
+                                </th>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.Y_LableCode)
+                                </th>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.YLableStatus)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Id)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Y_LableCode)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.YLableStatus)
+                                    </td>
+                                    <td>
+                                        <a class="ati ati-edit" asp-action="Edit" asp-route-id="@item.Id">
+                                            <i class="bi bi-pencil-fill"></i>
+                                        </a>
+                                        <a class="ati ati-view" asp-action="Details" asp-route-id="@item.Id">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </a>
+                                        <a class="ati ati-remove" asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('آیا مطمئن به حذف این مورد هستید؟')">
+                                            <i class="bi bi-trash3-fill"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section Scripts {
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                // Initialize DataTables
+                $('.table').DataTable();
+            });
+        </script>
+    }
+</body>
+ *@
+
+
+
+ @using PortalWebMVC.Models.Entities.Base_info
+@model IEnumerable<YLable>
+
+<head>
+    <!-- اضافه کردن CSS DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
+</head>
+
+<body>
+    <div class="row tehranit-box">
+        <div class="col-12">
+            <div class="content-box">
+                <div class="title-box">
+                    <span>لیــــست نام</span>
+                    <i class="bi bi-list-task"></i>
+                </div>
+                <a class="btn-icon btn-base mb-2" asp-action="Create">
+                    <span>افزودن فیلد جدید</span><i class="bi bi-plus-lg"></i>
+                </a>
+                <div class="table-responsive tehranit-table">
+                    <table id="myTable" class="table table-striped table-sm table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">@Html.DisplayNameFor(model => model.Id)</th>
+                                <th scope="col">@Html.DisplayNameFor(model => model.Y_LableCode)</th>
+                                <th scope="col">@Html.DisplayNameFor(model => model.YLableStatus)</th>
+                                <th>عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.Y_LableCode</td>
+                                    <td>@item.YLableStatus.GetDisplayName()</td> @* استفاده از متد اکستنشن *@
+                                    <td>
+                                        <a class="ati ati-edit" asp-action="Edit" asp-route-id="@item.Id">
+                                            <i class="bi bi-pencil-fill"></i>
+                                        </a>
+                                        <a class="ati ati-view" asp-action="Details" asp-route-id="@item.Id">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </a>
+                                        <a class="ati ati-remove" asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('آیا مطمئن هستید؟')">
+                                            <i class="bi bi-trash3-fill"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section Scripts {
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#myTable').DataTable({
+                    language: {
+                        search: "جستجو:",
+                        lengthMenu: "نمایش _MENU_ رکورد",
+                        info: "نمایش _START_ تا _END_ از _TOTAL_ رکورد",
+                        paginate: { first: "اول", last: "آخر", next: "بعدی", previous: "قبلی" }
+                    }
+                });
+            });
+        </script>
+    }
+</body>
+

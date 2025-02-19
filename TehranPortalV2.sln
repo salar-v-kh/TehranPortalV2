@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TehranPortalV2", "TehranPortalV2\TehranPortalV2.csproj", "{05AB14C4-2C40-45EF-9797-BC6C52DF786F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05AB14C4-2C40-45EF-9797-BC6C52DF786F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05AB14C4-2C40-45EF-9797-BC6C52DF786F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05AB14C4-2C40-45EF-9797-BC6C52DF786F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05AB14C4-2C40-45EF-9797-BC6C52DF786F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {128AFB85-932B-43C0-864E-03D7D192615F}
+	EndGlobalSection
+EndGlobal
